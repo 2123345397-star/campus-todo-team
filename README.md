@@ -65,3 +65,7 @@ git push origin v0.1.0
 - 作者不能批准自己的 Pull Request；评审意见处理完毕且 CI 通过后再合并。
 - 不提交 `.idea/`、`target/`、访问令牌、账号密码或个人隐私数据。
 - 禁止使用 `git push --force` 修改共享的 `main` 分支。
+## 项目协作与 CI 规范
+1. 项目配置 GitHub Actions 自动集成，推送代码或提交 PR 到 main 分支会自动执行 `mvn verify` 校验代码质量与单元测试。
+2. 所有功能开发需基于对应 feature 分支，禁止直接在 main 分支提交代码。
+3. 提交 PR 需按照模板填写修改说明、关联 Issue、自测结果，保证代码可构建、测试全部通过。
